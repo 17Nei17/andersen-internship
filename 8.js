@@ -4,8 +4,8 @@ let sum=0;
 let start=100;
 let end=200;
 for(let i=start;i<=end;i++){
-    if (i%17==0){
-        sum=sum+i;
-    }
+  if (i%17==0){
+    sum=sum+i;
+  }
 }
 console.log(sum);
