@@ -4,10 +4,10 @@ num1=20;
 num2=10;
 num3=30;
 if ((num1==num2)||(num1==num3)||(num2==num1)||(num2==num3)){
-    console.log ("Ошибка");
+  console.log ("Ошибка");
 }
 else {
-    let s=(num1+num2+num3)/3;
-    console.log(s);
+  let s=(num1+num2+num3)/3;
+  console.log(s);
 }
 
