@@ -15,7 +15,7 @@ if (start%2!=0){
 if((start%2)==0){
     while (start>0){
       sum+=start%10;
-        start=Math.floor(start/10);
+      start=Math.floor(start/10);
     }
     console.log("четное");
     console.log(sum);
