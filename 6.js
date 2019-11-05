@@ -3,5 +3,5 @@ let A=3;
 let B=5;
 for(var i=A;i<=B;i++){
   //  console.log(i*i*i);
-    console.log(Math.pow(i,3));
+  console.log(Math.pow(i,3));
 }
