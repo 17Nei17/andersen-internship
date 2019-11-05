@@ -12,9 +12,9 @@ while (A>1){
       else {
         Math.floor(sum2);
         sum2+=A%10;
-          A=Math.floor(A/10); //округляет вниз
+        A=Math.floor(A/10); //округляет вниз
       } 
   }
 }
 console.log("Результат ab+cd:");
-    console.log(sum1+sum2);
+console.log(sum1+sum2);
