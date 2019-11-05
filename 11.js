@@ -9,9 +9,9 @@ let sum=0;
 let num=0;
 let x=0;
 do {
-    x = +prompt('Введите число', '');
-    sum=sum+x;
-    num++;
+  x = +prompt('Введите число', '');
+  sum=sum+x; 
+  num++;
 }
 while (x!=0);
 console.log ("Количество чисел: ",num-1);
