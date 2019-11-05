@@ -1,9 +1,9 @@
 //Вводится четырёхзначное число (abcd). Вывести сумму ab + cd.
-var A=5175;
-var sum1=0;
-var sum2=0;
+let A=5175;
+let sum1=0;
+let sum2=0;
 while (A>1){
-  for (i=0;i<4;i++){
+  for (let i=0;i<4;i++){
       if (i<2){
         sum1=sum1+(A%10);
           A=Math.floor(A/10);
