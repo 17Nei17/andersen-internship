@@ -19,6 +19,7 @@ console.log(bus);
 console.log('Объект car');
 console.log(car); 
 */
+//первый вариант решения задачи:
 'use strict';
 function changeCar(inputObject){
   let newCar = JSON.parse(JSON.stringify(inputObject));
@@ -42,3 +43,37 @@ console.log('Объект autoTruck');
 console.log(autoTruck); 
 console.log('Объект car');
 console.log(car); 
+
+
+//2 вариант решения задачи:
+let car = {massa:1};
+console.log('Объект car');
+console.log (car);
+let bus = changeCar(car);
+console.log('Объект bus');
+console.log (bus);
+let autoTruck = changeCar2(car);
+console.log('Объект autoTruck');
+console.log (autoTruck);
+console.log('Объект car');
+console.log (car);
+
+function changeCar(inputObject) {
+  let objCopy = {}; 
+  let key;
+  for (key in inputObject) {
+    objCopy[key] = inputObject[key]; 
+  }
+  objCopy.passengers=35;
+  return objCopy;
+}
+
+function changeCar2(inputObject) {
+  let objCopy = {}; 
+  let key;
+  for (key in inputObject) {
+    objCopy[key] = inputObject[key]; 
+  }
+  objCopy.tonnage='тоннаж ';
+  return objCopy;
+}
