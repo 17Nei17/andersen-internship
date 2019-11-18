@@ -5,8 +5,8 @@ sum(3) = 3
 sum(5) = 8
 sum(228)
 */
-
-
+/*
+//не верное решение:
 function sum(x) {
   if (sum.sum===undefined){
     sum.sum=x;
@@ -14,10 +14,24 @@ function sum(x) {
   else sum.sum=x+sum.sum;
   return sum.sum;
 }
+*/
+//верное решение:
+
+function getSum() {
+  let buff = 0;
+  function buffer(x) {
+    buff += x;
+    return buff;
+  }
+  return buffer;
+};
+let sum = getSum();
 
 console.log(sum(3)); 
 console.log(sum(5)); 
-console.log(sum(3)); 
+
+
+
 
 
 
