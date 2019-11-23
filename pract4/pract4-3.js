@@ -24,7 +24,7 @@ function getSum() {
     return buff;
   }
   return buffer;
-};
+}
 let sum = getSum();
 
 console.log(sum(3)); 

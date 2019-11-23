@@ -11,3 +11,5 @@ function getSimple (x){
   console.log (`${flags}`);
 }
 getSimple(11);
+
+
