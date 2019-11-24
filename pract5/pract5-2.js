@@ -16,12 +16,13 @@ let Children = (name, surname, age) => {
     newSurname = surname;
   }
   let seAge = function (age) {
-    newAge =age;
+    newAge = age;
   }
   return {getInfoChildren ,setName,setSurname,seAge };
 };
 let vasia = Children ('Василий','Васильевич',36);
-
+let sanya = Children ('Александр', 'Александрович', 22)
 vasia.getInfoChildren();
+sanya.getInfoChildren();
 vasia.setName('Петя');
-vasia.getInfoChildren();
+
