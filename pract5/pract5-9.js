@@ -88,7 +88,6 @@ let Circle1 = new Circle (10);
 //Circle1.gerCircle();
 let Triangle1 = new Triangle (1,1,2,2,1,3);
 
-
 let arrCustomers = [Restangle1,Circle1,Triangle1];
 for (let i in arrCustomers){
   console.log (arrCustomers[i]);
