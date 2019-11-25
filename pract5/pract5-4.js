@@ -44,6 +44,22 @@ class Time {
     else this.minutes = (this.minutes+minutes);  
     
   }
+  addSecunds(secunds){
+    if ((this.secunds+secunds)>=60){
+      this.secunds = (this.secunds+secunds)-60; 
+      this.minutes = this.minutes+1;
+    }
+    else this.secunds = (this.secunds+secunds);  
+    
+  }
+  reduceMinute(minutes){
+    if ((this.minutes+minutes)<0){
+      this.minutes = (this.minutes+minutes)+60; 
+      this.hour = this.hour-1;
+    }
+    else this.minutes = (this.minutes-minutes);  
+    
+  }
   reduceHour (hour){
     if ((this.hour-hour)<=0){
       this.hour = (this.hour-hour)+24;  
@@ -55,6 +71,8 @@ let newSet = new Time ();
 newSet.setTime(10,12,33);
 newSet.getTime();
 //newSet.addHour(5);
-newSet.addMinute(120);
+//newSet.addMinute(50);
+newSet.reduceMinute(5);
+newSet.addSecunds(60);
 //newSet.reduceHour(11);
 newSet.getTime();
