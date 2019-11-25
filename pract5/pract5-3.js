@@ -2,29 +2,42 @@
 Класс будет содержать два метода: один заполнит массив значениями, второй произведет замену значений строк на значения столбцов. */
 
 class Matrix {
-  constructor(s1,s2,s3){ //массив в 3 столбца предпологается
-    this.s1 = s1;
-    this.s2 = s2;
-    this.s3 = s3;
+  constructor(x,y){ //массив в 3 столбца предпологается //Math.round(1 + Math.random() * 9);
+    this.x = x;
+    this.y = y;
+    this.arr = new Array(this.x);
+    for (let i = 0; i < this.x; i++) {
+      this.arr[i] = new Array(y);
+    }
   }
-  addElements (s1,s2,s3){
-    this.s1 = s1;
-    this.s2 = s2;
-    this.s3 = s3;
+  addElements (){
+    for (let i = 0; i < this.x; i++) {
+      for (let j = 0; j < this.y; j++) {
+        this.arr[i][j] =i;    
+      }
+    }
   }
   viewElements(){
-    let arr =[];
-    arr.push(this.s1);
-    arr.push(this.s2);
-    arr.push(this.s3);
-    console.log (arr);
+    for (let i = 0; i < this.x; i++) {
+      for (let j = 0; j < this.y; j++) {
+        console.log (this.arr[i][j]);
+      }
+    }
   }
   changeMatrix(){
-    let newArr =[];
-    this.s1 = 
-
+    //let temp = new Array();
+    for (let i = 0; i < this.x; i++) {
+      for (let j = 0; j < this.y; j++) {
+     //   temp.push(this.arr[j][i]);
+        this.arr[i][j] = this.arr[j][i];
+      }
+    }
+   // console.log (temp)
   }
 }
-let arr1 = new Matrix();
-arr1.addElements ([1,2,3],[11,22,33],[111,222,333]);
-arr1.viewElements();
+let arrs = new Matrix(2,2);
+arrs.addElements();
+arrs.viewElements();
+console.log ('Измененный массив:');
+arrs.changeMatrix();
+arrs.viewElements();
