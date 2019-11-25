@@ -2,62 +2,67 @@
 Все классы должны содержать методы для фиксации и получения значений всех координат,
  а производные классы методы вычисления площади (прямоугольник), площади поверхности и объема (пирамида). */
 class Line {
-  constructor(x1,y1,x2,y2){
-    this.x1 = x1;
-    this.y1 = y1;
-    this.x2 = x2;
-    this.y2 = y2;
+  constructor(A,B){
+    this.A = A;
+    this.B = B;
   }
-  setCoordinate(x1,y1,x2,y2){
-    this.x1 = x1;
-    this.y1 = y1;
-    this.x2 = x2;
-    this.y2 = y2;
+  setCoordinate(A,B){
+    this.A = A;
+    this.B = B;
   }
   getCoordinate(){
-    console.log (`1-я точка:(${this.x1},${this.y1})   2-я точка: (${this.x2},${this.y2})`);
+    console.log (`1-я точка:(${this.A})   2-я точка: (${this.B})`);
   }
 }
-let line = new Line (1,1,4,4);
-line.getCoordinate();
+
 class Rectangle extends Line{
-  constructor(x1,y1,x3,y3){
-    super(x1,y1);
-    this.x3 = x3;
-    this.y3 = y3;//т.к это прямоугольник то некоторые координаты должны быть равны, поэтому нет смысла их загонять в конструктор
-    this.x2 = x1;
-    this.x4 = x3;
-    this.y4 = y1;
-    this.y2 = y3;
+  constructor(A,B,C,D){
+    super(A,B);
+    this.C = C;
+    this.D = D;
   }
+  setCoordinate(A,B,C,D){
+    this.A = A;
+    this.B = B;
+    this.C = C;
+    this.D = D;
+  }  
   getArea(){
-    let lenght1 = Math.sqrt(Math.pow(this.x2-this.x1,2)+Math.pow(this.y2-this.y1,2)); //длины сторон прямоугольника
-    let lenght2 = Math.sqrt(Math.pow(this.x3-this.x2,2)+Math.pow(this.y3-this.y2,2)); 
+    let lenght1 = Math.sqrt(Math.pow(this.A[1]-this.A[0],2)+Math.pow(this.B[1]-this.B[0],2)); //длины сторон прямоугольника
+    let lenght2 = Math.sqrt(Math.pow(this.C[1]-this.C[0],2)+Math.pow(this.D[1]-this.D[0],2)); 
     let S = lenght1*lenght2;
     return S;
   }
+  getCoordinate (){
+    console.log (`1-я точка:(${this.A})   2-я точка: (${this.B})  3-я точка: (${this.C}) 4-я точка: (${this.D})`);
+  }
 }
-let restangle = new Rectangle(1,1,4,4);
-console.log (restangle.getArea());
+
+let restangle = new Rectangle ([1,1], [1,3],[3,3],[3,1]);
+console.log(restangle.getArea());
+restangle.getCoordinate();
 
 class Pyramide extends Rectangle {
-  constructor(x1,y1,z1,x2,y2,z2,x3,y3,z3,s1,s2,s3){//s- вершина пирамиды
-    super(x1,y1);
-    this.z1 =z1;
-    this.x2 = x2;
-    this.y2 = y2;
-    this.z2 = z2;
-    this.x3 = x3;
-    this.y3 = y3;
-    this.z3 = z3;
-    this.s1 = s1;
-    this.s2 = s2;
-    this.s3 = s3;
+  constructor(A,B,C,D,S){//s- вершина пирамиды
+    super(A,B,C,D);
+    this.S = S;
   }
-  // getArea(){//площадь поверности пирамиды
-    
-  //}
+  setCoordinate(A,B,C,D,S){
+    this.A = A;
+    this.B = B;
+    this.C = C;
+    this.D = D;
+    this.S = S;
+  } 
+  getVolume (){
+    let lenght1 = Math.sqrt(Math.pow(this.A[1]-this.A[0],2)+Math.pow(this.B[1]-this.B[0],2)); //длины сторон прямоугольника
+    let lenght2 = Math.sqrt(Math.pow(this.C[1]-this.C[0],2)+Math.pow(this.D[1]-this.D[0],2)); 
+    let area = lenght1*lenght2;
+    let H = this.S[2]-this.A[2];
+    let V = H*area/3;
+    return V;
+  }
 }
-let pyramide = new Pyramide()
+
 
 
