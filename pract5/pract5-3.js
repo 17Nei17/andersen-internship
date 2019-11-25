@@ -2,7 +2,7 @@
 Класс будет содержать два метода: один заполнит массив значениями, второй произведет замену значений строк на значения столбцов. */
 
 class Matrix {
-  constructor(x,y){ //массив в 3 столбца предпологается //Math.round(1 + Math.random() * 9);
+  constructor(x,y){ 
     this.x = x;
     this.y = y;
     this.arr = new Array(this.x);
