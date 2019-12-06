@@ -1,13 +1,12 @@
-//Напишите функцию getDivisors, которая на вход получает число и возвращает массив его делителей
+// Напишите функцию getDivisors, которая на вход получает число и возвращает массив его делителей
 // (чисел, на которое делится данное число).
-function getDivisors(x){
-  let arr=[];
-  for(let i=1;i<=x;i++){
-    if (x%i!=0){
+function getDivisors(x) {
+  const arr = [];
+  for (let i = 1; i <= x; i += 1) {
+    if (x % i !== 0) {
       continue;
-    }
-    else arr.push(i);
+    } else arr.push(i);
   }
-  console.log (arr)
+  console.log(arr);
 }
 getDivisors(120);
