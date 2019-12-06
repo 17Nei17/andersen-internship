@@ -19,32 +19,32 @@ console.log(bus);
 console.log('Объект car');
 console.log(car); 
 */
-//первый вариант решения задачи:
-'use strict';
-function changeCar(inputObject){
-  let newCar = JSON.parse(JSON.stringify(inputObject));
-  newCar.passengers=35;
+// первый вариант решения задачи:
+
+function changeCar(inputObject) {
+  const newCar = JSON.parse(JSON.stringify(inputObject));
+  newCar.passengers = 35;
   return newCar;
 }
-function changeCar2(inputObject){
-  let newCar = JSON.parse(JSON.stringify(inputObject));
-  newCar.tonnage=6;
+function changeCar2(inputObject) {
+  const newCar = JSON.parse(JSON.stringify(inputObject));
+  newCar.tonnage = 6;
   return newCar;
 }
 
-let car = {massa:1};
-let bus = changeCar(car);
-let autoTruck = changeCar2(car);
+const car = { massa: 1 };
+const bus = changeCar(car);
+const autoTruck = changeCar2(car);
 console.log('Объект car');
 console.log(car);
 console.log('Объект bus');
 console.log(bus);
 console.log('Объект autoTruck');
-console.log(autoTruck); 
+console.log(autoTruck);
 console.log('Объект car');
-console.log(car); 
+console.log(car);
 
-
+/*
 //2 вариант решения задачи:
 let car = {massa:1};
 console.log('Объект car');
@@ -77,3 +77,4 @@ function changeCar2(inputObject) {
   objCopy.tonnage='тоннаж ';
   return objCopy;
 }
+*/
