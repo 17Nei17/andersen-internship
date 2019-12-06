@@ -10,9 +10,9 @@ function func() {
 func(); // тут должно вывести значение obj.a
 */
 
-let obj = {
+const obj = {
   a: 10,
-  b: 12
+  b: 12,
 };
 
 function func() {
