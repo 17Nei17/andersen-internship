@@ -7,5 +7,7 @@ console.log(peopleAge); // [4, 79, 29, 33]
 */
 
 const peopleBirthDate = [2015, 1940, 1990, 1986];
-let peopleAge = peopleBirthDate.map ((n) => {return 2019 - n;})
-console.log (`${peopleAge}`);
+const peopleAge = peopleBirthDate.map(n => {
+  return 2019 - n;
+});
+console.log(`${peopleAge}`);
