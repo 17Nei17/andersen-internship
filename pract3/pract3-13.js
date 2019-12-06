@@ -1,4 +1,4 @@
-/*13.  В указанном месте примените конструкцию с методом bind() так, чтобы this внутри функции func всегда указывал на объект phrase.
+/* 13.  В указанном месте примените конструкцию с методом bind() так, чтобы this внутри функции func всегда указывал на объект phrase.
 let phrase = {
   value: "привет"
 };
@@ -10,8 +10,8 @@ function func(surname, name) {
 func('Иванов', 'Иван'); //тут должно вывести 'привет, Иванов Иван'
 func('Петров', 'Петр'); //тут должно вывести 'привет, Петров Петр'
 */
-let phrase = {
-  value: "привет"
+const phrase = {
+  value: 'привет',
 };
 
 function func(surname, name) {
@@ -19,6 +19,6 @@ function func(surname, name) {
 }
 
 func.bind(phrase);
-let funcbind = func.bind(phrase);
+const funcbind = func.bind(phrase);
 funcbind('Иванов', 'Иван');
-funcbind('Петров', 'Петр'); 
+funcbind('Петров', 'Петр');
