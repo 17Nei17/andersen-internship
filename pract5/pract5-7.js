@@ -29,15 +29,15 @@ point2.setPoint(22,33,'red');
 point2.vievPoint ();
 */
 
-let Point = function (x,y){
+const Point = function(x, y) {
   this.x = x;
   this.y = y;
 };
-Point.prototype.setPoint = function(x,y){
+Point.prototype.setPoint = function(x, y) {
   this.x = x;
   this.y = y;
 };
-let Graphicpoint = function(x, y,color) {
+const Graphicpoint = function(x, y, color) {
   this.x = x;
   this.y = y;
   this.color = color;
@@ -45,13 +45,12 @@ let Graphicpoint = function(x, y,color) {
 Graphicpoint.prototype = Object.create(Point.prototype);
 
 Graphicpoint.prototype.vievPoint = function() {
-  console.log(this.x , this.y ,this.color);
+  console.log(this.x, this.y, this.color);
 };
 
-let point1 = new Point(10,54);
-let point2 = new Graphicpoint(5,2,'red');
+const point1 = new Point(10, 54);
+const point2 = new Graphicpoint(5, 2, 'red');
 
-point2.vievPoint ();
-point1.setPoint (2,5);
-console.log (point1);
-
+point2.vievPoint();
+point1.setPoint(2, 5);
+console.log(point1);
