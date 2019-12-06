@@ -17,10 +17,8 @@ function sayName(name) {
 }
 
 function miHiOrderFunction(func, ...arg) {
-  for (let i=1; i<=arg.length; i++){
+  for (let i = 1; i <= arg.length; i += 1) {
     func(arguments[i]);
   }
 }
 miHiOrderFunction(sayName, 'Петя', 'Маша', 'John'); // Я -Петя Я - Маша ...
-
-
