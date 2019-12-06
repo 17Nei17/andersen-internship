@@ -15,11 +15,13 @@ const squaredIntegers = squareList([-3, 3, 8, 8.2, 4.8, 5, 3, -3.2]);
 console.log(squaredIntegers); // [9, 64, 25, 9]
 */
 
-const squareList = (arr) =>{
-  arr = arr.filter(arr=>(arr>0) && (arr%1==0))
-  arr = arr.map ((n) => {return n*n;})
+const squareList = arr => {
+  arr = arr.filter(arr => arr > 0 && arr % 1 === 0);
+  arr = arr.map(n => {
+    return n * n;
+  });
   return arr;
   // изменять код до этой строки
-}
+};
 const squaredIntegers = squareList([-3, 3, 8, 8.2, 4.8, 5, 3, -3.2]);
 console.log(`${squaredIntegers}`); // [9, 64, 25, 9]
