@@ -1,4 +1,4 @@
-/*Напишите функцию range, принимающую два аргумента, начало и конец диапазона,
+/* Напишите функцию range, принимающую два аргумента, начало и конец диапазона,
  и возвращающую массив, который содержит все числа из него, включая начальное и конечное.
  Затем напишите функцию sum, принимающую массив чисел и возвращающую их сумму. 
  Запустите указанную выше инструкцию и убедитесь, что она возвращает 55 для range(1, 10).
@@ -10,32 +10,30 @@ console.log(sum(range(1, 10)));
 console.log(range(5, 2, -1));
 // → [5, 4, 3, 2]
 */
-function sum(x){
+function sum(x) {
   let arrSum = 0;
-  for (let i=0;i<=x.length;i++){
-    arrSum+=i;
+  for (let i = 0; i <= x.length; i += 1) {
+    arrSum += i;
   }
   return arrSum;
 }
 
-function range (a,z,step){
-  if (step==undefined){
+function range(a, z, step) {
+  if (step === undefined) {
     step = 1;
   }
-  let arr=[];
-  if (step>0){
-    for (let i=a; i<=z; i=i+step){
+  const arr = [];
+  if (step > 0) {
+    for (let i = a; i <= z; i += step) {
       arr.push(i);
     }
     return arr;
   }
-  else {
-    for (let i=a;i>=z;i=i+step){
-      arr.push(i);
-    }
-    return arr;
+  for (let i = a; i >= z; i += step) {
+    arr.push(i);
   }
+  return arr;
 }
 console.log(sum(range(1, 10)));
-console.log (range(1, 10, 2));
+console.log(range(1, 10, 2));
 console.log(range(5, 2, -1));
