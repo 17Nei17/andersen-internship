@@ -17,15 +17,15 @@ team[5](); // игрок выводит 10…
 */
 
 function makeTeam() {
-  let players = [];
-  for ( let i = 0; i < 10; i++) {
-    let player = function() { // функция-игрок
+  const players = [];
+  for (let i = 0; i < 10; i += 1) {
+    const player = function() {
       console.log(`${i}`); // выводит свой номер
     };
     players.push(player);
   }
   return players;
 }
-let team = makeTeam();
-team[0](); 
-team[5](); 
+const team = makeTeam();
+team[0]();
+team[5]();
