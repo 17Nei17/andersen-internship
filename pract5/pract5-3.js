@@ -1,8 +1,8 @@
-/*3. Преобразовать строки двумерного массива в столбцы. 
+/* 3. Преобразовать строки двумерного массива в столбцы. 
 Класс будет содержать два метода: один заполнит массив значениями, второй произведет замену значений строк на значения столбцов. */
 
 class Matrix {
-  constructor(x,y){ 
+  constructor(x, y) {
     this.x = x;
     this.y = y;
     this.arr = new Array(this.x);
@@ -10,34 +10,34 @@ class Matrix {
       this.arr[i] = new Array(y);
     }
   }
-  addElements (){
+
+  addElements() {
     for (let i = 0; i < this.x; i++) {
       for (let j = 0; j < this.y; j++) {
-        this.arr[i][j] =i;    
+        this.arr[i][j] = i;
       }
     }
   }
-  viewElements(){
+
+  viewElements() {
     for (let i = 0; i < this.x; i++) {
       for (let j = 0; j < this.y; j++) {
-        console.log (this.arr[i][j]);
+        console.log(this.arr[i][j]);
       }
     }
   }
-  changeMatrix(){
-    //let temp = new Array();
+
+  changeMatrix() {
     for (let i = 0; i < this.x; i++) {
       for (let j = 0; j < this.y; j++) {
-     //   temp.push(this.arr[j][i]);
         this.arr[i][j] = this.arr[j][i];
       }
     }
-   // console.log (temp)
   }
 }
-let arrs = new Matrix(2,2);
+const arrs = new Matrix(2, 2);
 arrs.addElements();
 arrs.viewElements();
-console.log ('Измененный массив:');
+console.log('Измененный массив:');
 arrs.changeMatrix();
 arrs.viewElements();
