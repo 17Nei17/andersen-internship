@@ -1,3 +1,4 @@
+// Создайте форму с input и кнопкой. По нажатию на кнопку стиль содержимого input изменяется, например меняется цвет.
 function switchInputStyle() {
   let i = 0;
   switchInputStyle = function() {
