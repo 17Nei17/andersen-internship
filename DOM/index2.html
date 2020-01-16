@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id='task5'>
+    <p>Создайте форму с двумя input и кнопкой. По нажатию на кнопку содержимое input элементов меняется местами.</p>
+      <FORM id = "form2">
+        <input type = "text" name = "fname" > <br>
+        <input type = "text" name = "lname" > <br>
+        <input type="button" onclick="switchInput()" value="switchInput">
+      </FORM>  
+  </div>
+  <div id='task6'>
+    <p>Создайте форму с input и кнопкой. По нажатию на кнопку стиль содержимого input изменяется, например меняется цвет.</p>
+      <FORM id = "form3">
+        <input type = "text" name = "fname" > <br>
+        <input type="button" onclick="switchInputStyle()" value="switchInputStyle">
+      </FORM>  
+  </div>
+  <div id='task7'>
+    <p>Создайте форму с input и двумя кнопками. Нажатие на первую кнопку блокирует возможность изменения содержимого input, а вторая - разблокирует.</p>
+      <FORM id = "form4">
+        <input type = "text" name = "fname" > <br>
+        <input type="button" onclick="blockInput()" value="blockInput">
+        <input type="button" onclick="unBlockInput()" value="unBlockInput">
+      </FORM>  
+  </div>
+  <div id='task8'>
+    <p>Создайте на странице кнопку, на которой отображается количество нажатий на нее.</p>
+        <input type="button" id = "b1" onclick="clickCounter()" value="0">
+  </div>
+    <a href="index3.html">следующая страница</a>
+</body>
+<script src="blockInput.js" ></script>
+<script src="clickCounter.js" ></script>
+<script src="switchInput.js" ></script>
+<script src="switchInputStyle.js" ></script>
+</html>
