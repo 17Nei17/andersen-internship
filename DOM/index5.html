@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body onselectstart="return false">
+  <p> Создайте поле из белых клеток (размер примерно 30×30 пикселей). При клике на клеточку она должна менять цвет на черный. Под таблицей должны быть кнопки:
+    «поменять цвета» (при нажатии все цвета клеток меняются на противоположные)
+   «сброс» (при нажатии все клетки становятся белыми).</p>
+   Примечание:
+  <p> 1.    Поле можно создать с помощью таблицы. Таблицу следует сгенерировать и добавить в DOM страницы используя JS.</p>
+  <p> 2.    Обработчик события должен быть один на всю таблицу, а не отдельный на каждую клетку.</p>
+  <p> 3.    Для изменения цвета всех клеток сразу, пометить их отдельным классом, а затем поменять класс на таблице.</p>
+  <p> 4.    Предпочтительно использовать событие mousedown, срабатывающее при нажатии кнопки.</p>
+  <p> 5.   Средствами CSS3 сделать таблицу невыделяемой. </p>
+  <div>
+      <input type="button" value="инверсия" onclick="inversion()">
+      <input type="button" value="очистить" onclick="whiteall()">
+  </div>
+  <a href="index6.html">следующая страница</a>
+</body>
+
+<script src="field.js" ></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</html>
