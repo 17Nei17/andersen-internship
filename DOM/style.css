@@ -1,0 +1,55 @@
+#form1{
+  padding: 20px;
+  border: 1px solid black; /* Параметры границы */
+}
+#task1{
+  padding: 20px; 
+  border: 1px solid black; /* Параметры границы */
+}
+#task3{
+  padding: 20px; 
+  border: 1px solid black; /* Параметры границы */
+}
+#task4{
+  padding: 20px; 
+  border: 1px solid black; /* Параметры границы */
+}
+
+
+#task5, #task7 ,#task8, #task9, #task10, #task12, #task13, #task14{
+  border: 1px solid black; /* Параметры границы */
+  padding: 10px; 
+}
+.black{
+  background: black;
+}
+.white{
+  background: rgb(255, 255, 255);
+}
+table { 
+  border: 1px solid rgb(255, 255, 255);
+  border-collapse: collapse; /* Убираем двойные линии */
+}
+
+#div1 {
+  border: 3px solid rgb(3, 1, 1);
+  height: 400px;
+  table-layout: fixed;
+}
+#div1 td {
+  border: 2px solid rgb(0, 0, 0);
+}
+.col{
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+#div2 {
+  border: 3px solid rgb(255, 93, 93) 87);
+  height: 100px;
+  table-layout: fixed;
+}
+#div2 td {
+  border: 1px solid rgb(126, 0, 0);
+}
