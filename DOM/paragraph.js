@@ -1,3 +1,4 @@
+// Создайте абзац текста с несколькими атрибутами и кнопку. По нажатию на кнопку Текст абзаца заменяется на его атрибуты.
 function paragraph() {
   let paragraph = document.getElementById('paragraph');
   let arr;
