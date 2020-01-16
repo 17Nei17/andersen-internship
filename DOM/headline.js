@@ -1,3 +1,4 @@
+// По нажатию на кнопку, заголовок h1 трансформируется в h3
 let h = 3;
 function Headline() {
   const Headline = document.getElementById('Headline');
